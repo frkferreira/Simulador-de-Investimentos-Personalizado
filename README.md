@@ -1,42 +1,49 @@
-# 📈 Simulador de Investimentos Personalizado
+# 📊 Planilha de Simulação de Planejamento e Estratégia de Investimentos baseada em tipos de Fundos de Investimento
 
-Este repositório contém uma planilha inteligente desenvolvida para simular a evolução de patrimônio através de juros compostos. O objetivo é fornecer uma visão clara de como aportes mensais e taxas de juros (anuais e mensais) impactam o saldo final ao longo do tempo.
+Este repositório contém um simulador, focado em **projeção de cenários de longo prazo** e **estratégia de alocação de ativos** baseada em perfil de risco.
 
-## 🚀 Funcionalidades
+## 🎯 Objetivo da Planilha
+Diferente de uma simples tabela de fluxo, esta versão funciona como um painel de inteligência financeira onde você define sua capacidade de aporte e o simulador projeta sua liberdade financeira e sugere onde investir.
 
-- **Conversão Automática de Taxas:** Transforma a taxa anual (Efetiva) em taxa mensal usando a fórmula de juros compostos.
-- **Simulação de Aportes:** Permite configurar aportes mensais recorrentes.
-- **Cálculo Antecipado:** Os juros são calculados sobre o saldo inicial somado ao aporte do mês, refletindo um cenário de investimento no início do período.
-- **Fluxo Mensal Detalhado:** Visão clara mês a mês de:
-  - Principal (Saldo Inicial)
-  - Aporte realizado
-  - Juros gerados no período
-  - Saldo final acumulado
+## 🛠️ Funcionalidades do Simulador (V2)
 
-## 🧮 Metodologia de Cálculo
+A aba **SIMULADOR DE INVESTIMENTO** é dividida em três núcleos principais:
 
-Para garantir a precisão financeira, a planilha utiliza as seguintes fórmulas:
+### 1. Configurações de Entrada (Inputs)
+Campos para definir a base do planejamento:
+- **Salário:** Base de renda do investidor.
+- **Rendimento da Carteira:** Taxa de retorno mensal esperada.
+- **Sugestão de Investimento:** Valor total disponível para novos aportes.
 
-### 1. Equivalência de Taxa (Anual para Mensal)
-A planilha não divide a taxa por 12 (juros simples), mas utiliza a fórmula de juros compostos:
-$$i_{m} = (1 + i_{a})^{\frac{1}{12}} - 1$$
+### 2. Projeção de Cenários (Liberdade Financeira)
+Baseado nas configurações estipuladas pelo investidor, o simulador calcula automaticamente o **Patrimônio Acumulado** e os **Dividendos Mensais** estimados para diferentes horizontes de tempo:
+- **Curto Prazo:** 02 anos.
+- **Médio Prazo:** 05 e 10 anos.
+- **Longo Prazo:** 20 e 30 anos.
 
-### 2. Evolução do Patrimônio
-O cálculo do saldo final de cada mês segue a lógica:
-$$\text{Saldo Final} = (\text{Saldo Inicial} + \text{Aporte}) \times (1 + \text{Taxa Mensal})$$
-
-## 📋 Como usar a planilha
-
-1. **Configuração Inicial:** Preencha a data de início e o valor que você já possui investido.
-2. **Definição de Taxas:** Insira a taxa anual esperada (ex: 12%). A planilha calculará automaticamente a taxa mensal.
-3. **Planejamento de Aportes:** Defina o valor que pretende investir todos os meses.
-4. **Análise de Resultados:** Acompanhe a tabela de fluxo para visualizar em quanto tempo você atingirá seus objetivos financeiros.
-
-## 🛠️ Tecnologias Utilizadas
-
-- **Microsoft Excel / Google Sheets**
-- **Fórmulas Financeiras Avançadas**
-- **Markdown** (para documentação)
+### 3. Estratégia de Alocação (Portfólio Sugerido)
+Com base no seu **Perfil de Investidor** (ex: Moderado) e no valor disponível para aporte, a planilha sugere uma distribuição de capital por tipo de ativo:
+- **PAPEL:** Dívidas imobiliárias (CRIs).
+- **TIJOLO:** Imóveis físicos (Shoppings, Galpões).
+- **HÍBRIDOS / FOF's:** Diversificação em outros fundos.
+- **DESENVOLVIMENTO / HOTELARIA:** Ativos de maior risco/retorno.
 
 ---
-💡 *Dica: Use esta planilha para comparar diferentes cenários, como o impacto de aumentar seu aporte mensal em apenas R$ 100,00 no longo prazo!*
+
+## 🧮 Inteligência por Trás do Dashboard
+
+- **Cálculo de Projeção:** Utiliza a fórmula de valor futuro para determinar o crescimento do capital com juros compostos ao longo das décadas.
+- **Matriz de Alocação:** Cruza o perfil de investidor cadastrado na aba `SUPORTE` com o valor do aporte mensal para gerar os valores exatos (em R$) de quanto comprar de cada tipo de ativo.
+- **Estimativa de Dividendos:** Projeta a renda passiva mensal que o patrimônio acumulado geraria, baseando-se na taxa de rendimento configurada.
+
+---
+
+## 🚀 Como Utilizar
+
+1. **Defina seu Perfil:** Ao escolher qual perfil de investidor você se encaixa, o simulador lhe mostrará as porcentagens de alocação relacionada a esse perfil.
+2. **Preencha os Dados na Aba Principal:** Insira seu salário e o valor que deseja investir mensalmente.
+3. **Analise os Cenários:** Veja em quanto tempo você atingirá sua meta de dividendos mensais.
+4. **Sugestão de Compra:** Utilize a tabela de **TIPO DE FII** para ter uma noção de como dividir seu aporte do mês entre as categorias de fundos imobiliários.
+
+---
+*Este simulador é uma ferramenta de apoio tático para investidores que buscam uma carteira equilibrada e focada em renda passiva.*
